@@ -61,3 +61,72 @@ Nem todos os elementos seguem o padrão acima de: tag de abertura, conteúdo, ta
 
 Nota: Elementos vazios são também chamados de void elements.
 ----------------------------------------------------------------------------
+
+Atributos
+
+Elementos também podem conter atributos.
+
+Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Neste caso, o atributo class permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
+
+Um atributo deve conter:
+
+Um espaço entre ele e o nome do elemento (ou o atributo anterior, caso o elemento já contenha um ou mais atributos.)
+O nome do atributo, seguido por um sinal de igual.
+Um valor de atributo, com aspas de abertura e fechamento em volta dele.
+
+Aprendizado ativo: Adicionando atributos a um elemento
+
+Outro exemplo de um elemento é <a> — isso significa "âncora" e fará com que a parte do texto que ele envolve vire um link. Isso pode ter vários atributos, mas o mais comuns são os seguintes:
+
+O valor desse atributo especifica o endereço da web para o qual você deseja que o link aponte; onde o navegador irá quando o link for clicado. Por exemplo href="https://www.mozilla.org/".
+title: O atributo title especifica uma informação extra sobre o link, assim como o assunto da página que está sendo linkada. Por exemplo title="Homepage da Mozilla". Isto será exibido como uma tooltip (dica de contexto) quando passarmos o mouse sobre o link.
+Edite a linha abaixo na área de Entrada para transformá-la em um link para o seu site favorito.
+----------------------------------------------------------------------------
+
+Atributos boleanos
+
+Às vezes você verá atributos escritos sem valores — isso é permitido nos chamados atributos boleanos, e eles podem ter somente um valor, que é geralmente o mesmo nome do atributo. Por exemplo, o atributo disabled você pode atribuir para os elementos de entrada de formulários, se desejar que estes estejam desativados (acinzentados), para que o usuário não possa inserir nenhum dado neles.
+
+file:///C:/Users/edson/OneDrive/Documentos/Programa%20Web/MDN-estudos/MDN-web-docs/html/06-atributosBoleanos.html
+
+----------------------------------------------------------------------------
+
+Omitindo as aspas dos valores do atributo
+
+Olhando a World Wide Web (internet), você encontrará todos os tipos de estilos de marcação HTML, incluindo valores de atributos sem as aspas. Isso é permitido em algumas circunstâncias, mas irá quebrar sua marcação em outras. Por exemplo, se voltarmos ao exemplo anterior de link , nós podemos escrever a versão básica deste somente com o atributo href, da seguinte forma:
+
+<a href=https://www.mozilla.org/>site favorito</a>
+
+No entanto, assim que adicionamos o atributo title neste elemento, a marcação resultará em erro:
+
+<a href=https://www.mozilla.org/ title=The Mozilla homepage>site favorito</a>
+
+Neste ponto, o navegador irá interpretar errado sua marcação, de modo a pensar que o atributo title trata-se, na verdade, de três atributos: o atributo title com o valor "The", e dois atributos boleanos, Mozilla e homepage. Esta obviamente não era a intenção e irá causar erros ou um comportamento inesperado no código, assim como visto no exemplo abaixo. Tente colocar o mouse em cima do link para visualizar qual é o título que aparece!
+
+
+Nossa recomendação é sempre incluir as aspas nos valores dos atributos — isto evita inúmeros problemas, além de resultar em um código mais legível.
+
+Aspas simples ou duplas?
+
+Você pode perceber que os valores dos atributos exemplificados neste artigo estão todos com aspas duplas, mas você poderá ver aspas simples no HTML de algumas pessoas. Esta é puramente uma questão de estilo e você pode se sentir livre para escolher qual prefere. As duas linhas de código a seguir são equivalentes:
+
+<a href="http://www.example.com">Um link para o exemplo.</a>
+
+<a href='http://www.example.com'>Um link para o exemplo.</a>
+
+Entretanto, você deve se certificar de não misturar os dois tipos de aspas juntos. O exemplo a seguir está errado!
+
+<a href="http://www.exemplo.com'>Um link para o exemplo.</a>
+
+Se utilizar um tipo de aspas no seu HTML, você pode inserir o outro tipo de aspas no texto, por exemplo, que não ocorrerá erro, desta forma:
+
+<a href="http://www.example.com" title="Isn't this fun?">A link to my example.</a>
+
+No entanto, se você quiser incluir aspas, dentro de aspas onde ambas as aspas são do mesmo tipo (aspas simples ou aspas duplas), será necessário usar entidades HTML para as aspas. Por exemplo, isso irá quebrar:
+
+<a href='http://www.example.com' title='Isn't this fun?'>A link to my example.</a>
+Então você precisa fazer isso:
+
+<a href='http://www.example.com' title='Isn&#39;t this fun?'>A link to my example.</a>
+----------------------------------------------------------------------------
+
