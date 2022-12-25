@@ -1,0 +1,54 @@
+https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started
+
+
+O que é HTML ?
+
+H - HyperText
+M - Markup
+L - Language
+
+significado.: Linguagem de marcação de hiper-texto.
+
+---------------------------------------------------------------------------
+
+
+*Não é uma linguagem de programação*, é uma linguagem de marcação utilizada para dizer ao seu navegador como estruturar a página web. 
+
+
+*HTML* consiste em uma série de elementos que você usa para anexar, envolver ou marcar diferentes partes do conteúdo para que apareça ou aja de uma certa maneira.
+
+ O fechamento das tags pode transformar uma parte do conteúdo dentro do elemento em um link para direcionar à uma outra página web, colocar as palavras em itálico, e assim por diante.
+
+ (elementos = https://developer.mozilla.org/pt-BR/docs/Glossary/Element);
+ (tags = https://developer.mozilla.org/pt-BR/docs/Glossary/Tag);
+
+
+ ---------------------------------------------------------------------------
+
+ Anatomia de um elemento HTML
+
+ consiste em:
+
+ Tag de abertura - Consiste no nome do elemento ( neste caso: p ), envolvido entre parênteses angulares de abertura e fechamento. Isso indica onde o elemento começa, ou inicia a produzir efeito — neste caso, onde o parágrafo se inicia.
+
+ Tag de fechamento - É o mesmo que a tag de abertura, exceto que este inclui uma barra diagonal antes do nome do elemento. Indica onde o elemento termina — neste caso, onde fica o fim do parágrafo. Falhar em incluir o fechamento de uma tag é um erro comum para iniciantes e pode levar a resultados estranhos.
+
+ O conteúdo - Este é o conteúdo do elemento, que neste caso é somente texto.
+
+ O elemento - A tag de abertura, mais a tag de fechamento, mais o conteúdo, é igual ao elemento.
+
+ ---------------------------------------------------------------------------
+
+ Aninhando elementos
+
+Elementos podem ser inseridos dentro de outros elementos — isto é chamado de aninhamento. Se nós quisermos dizer que nosso gato é muito mal-humorado, nós poderemos envolver a palavra "muito" com o elemento <strong>, que significa enfatizar fortemente a palavra.
+
+file:///C:/Users/edson/OneDrive/Documentos/Programa%20Web/MDN-estudos/MDN-web-docs/html/02%20-%20aninhamentoElement.html
+----------------------------------------------------------------------------
+
+Elementos em bloco x elementos inline
+
+Há duas categorias importantes no HTML, que você precisa conhecer. Eles são elementos em bloco e elementos inline.
+
+Elementos em bloco formam um bloco visível na página — eles aparecerão em uma nova linha logo após qualquer elemento que venha antes dele, e qualquer conteúdo depois de um elemento em bloco também aparecerá em uma nova linha. Elementos em bloco geralmente são elementos estruturais na página que representam, por exemplo: parágrafos, listas, menus de navegação, rodapés etc. *Um elemento em bloco não seria aninhado dentro de um elemento inline, mas pode ser aninhado dentro de outro elemento em bloco.*
+----------------------------------------------------------------------------
